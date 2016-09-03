@@ -7,7 +7,7 @@ var Weather = React.createClass({
   getInitialState: function () {
     return {
       isLoading: false
-    }
+    };
   },
   handleSearch: function (location) {
     var that = this;
