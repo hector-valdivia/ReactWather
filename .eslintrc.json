@@ -33,5 +33,6 @@
             "error",
             "always"
         ]
-    }
+    },
+    "allowTemplateLiterals": true //allows strings to use backticks
 }
