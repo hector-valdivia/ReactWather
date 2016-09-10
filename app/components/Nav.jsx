@@ -4,7 +4,12 @@ var {Link, IndexLink} = require('react-router');
 var Nav = React.createClass({
   onSearch: function(e){
     e.preventDefault();
-    alert('Not yet wired up'+ this.refs.busqueda.value);
+    var location = this.refs.busqueda.value;
+    var encodedLocation = encodeURIComponent(location);
+    if (location.length > 0){
+      this.refs.busqueda.value = '';
+      window.location.hash = '#/?location=' + encodedLocation;
+    }
   },
   render: function(){
     return (
